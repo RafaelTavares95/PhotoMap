@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<title>PhotoMap</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style_form.css">
+		<script src="js/script_maps.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+	
+	
+	
+	</head>
+	<body onload="initialize()">
+		<nav class="navbar navbar-default ">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img class="logo" src=""></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="CarregarPostagens"><span class="glyphicon glyphicon-list-alt icone"></span></a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-plus icone"></span></a></li>	
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="row">
+			<div class="col-md-4 col-md-push-1">
+				<form action="Adicionar Imagem" method="POST">
+					<div class="form-group">
+						<label for="nome">Título </label>
+						<input type="text" class="form-control" id="nome" name="nome" autofocus required>
+					</div><br>
+						
+					<div class="form-group">
+						<label for="dtfoto">Data em que a foto foi tirada</label>
+						<input type="date" class="form-control" id="dtfoto" name="dtfoto">
+					</div><br>
+						
+					<div class="form-group">
+						<label for="email">Descrição</label>
+						<textarea class="form-control" rows="5" ></textarea>
+					</div><br>
+						
+					<input type="file" name="imagem"><br>
+						
+					<button type="submit" class="btn btn-primary pull-right btn-lg">
+						Cadastrar
+					</button>
+				</form>
+					
+			</div>
+		</div>
+		
+		<div class="col-md-4 col-md-pull-1" id="map_canvas" style="width:50%; height:50%" ></div>
+		
+	</body>
+</html>

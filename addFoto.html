@@ -3,20 +3,20 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>PhotoMap - Adicionar Foto</title>
+		<title>PictureMap - Adicionar Foto</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 		<link href="css/style_form.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="shortcut icon" href="img/logo.png" >
-		<script src="js/script_maps.js"></script>
-		
+	
+	<script src="js/script_maps.js"></script>
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		
 	</head>
-	<body>
+	<body Onload="loadScript()">
 		<nav class="navbar navbar-default ">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -29,7 +29,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" title="Home"><span class="glyphicon glyphicon glyphicon-home icone"></span></a></li>
+						<li><a href="home.html" title="Home"><span class="glyphicon glyphicon glyphicon-home icone"></span></a></li>
 						<li><a href="#" title="Adicionar Foto"><span class="glyphicon glyphicon-plus icone"></span></a></li>
 							
 							
@@ -39,14 +39,15 @@
 		</nav>
 		
 		
-		
+		<div id="map_canvas" style="width:100%; height:100%" ></div>
+
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-5 col-sm-offset-1">
+				<div class="col-sm-5 col-sm-offset-0">
       
 					<h1>Adicionar Foto</h1>
       
-						<form action="Adicionar Imagem" method="POST" class="form-horizontal">
+						<form method="POST" enctype="multipart/form-data" class="form-horizontal">
 							<div class="form-group">
 								<div class="col-xs-10">
 									<label for="titulo_img">Título </label>
@@ -70,10 +71,19 @@
 		 
 							<div class="form-group">
 								<div class="col-xs-10">
-									<input type="file" name="imagem">
+									<input type="file" name="imagem" accept="image/png, image/jpeg">
 								</div>
 							</div>
-		  
+		  					
+							<div class="form-group">
+								<div class="col-xs-10">
+									<label>Latitude</label>
+									<input id="latitude" type="text" class="form-control"><br>
+									<label>Longitude</label>
+									<input id="longitude" type="text" class="form-control">
+								</div>
+							</div>
+
 							<div class="form-group">
 								<div class="col-xs-10">
 									<button class="btn pull-right">Adicionar</button>
@@ -83,16 +93,13 @@
 					<hr>
       
 				</div>
-				<div class="col-sm-6 map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d1980.5034499392211!2d-38.54452298280235!3d-6.889775919645343!3m2!1i1024!2i768!4f13.1!2m1!1sInstituto+Federal+de+Educa%C3%A7%C3%A3o%2C+Ci%C3%AAncia+e+Tecnologia%2C+Cajazeiras!5e0!3m2!1spt-BR!2sbr!4v1426877366559" width="490" height="592" frameborder="0" style="border:0"></iframe>                    
-                </div>
+					                
             </div>
 		</div>
-
+		
 		<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
-		<script src="js/scripts.js"></script>
 	</body>
 </html>

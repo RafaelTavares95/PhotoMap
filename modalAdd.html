@@ -1,47 +1,53 @@
 <div id="modalAdd" class="modal fade">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-					<h4 class="modal-title">Adicionar Foto</h4>
-					<form action="Adicionar Imagem" method="POST" class="form-horizontal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<h2 class="modal-title">Adicionar Foto</h2>
+					</div>
+					<div class="modal-body">
+						<form method="POST" enctype="multipart/form-data" class="form-horizontal">
 							<div class="form-group">
-								<div class="col-xs-10">
+								<div class="col-xs-12">
 									<label for="titulo_img">Título </label>
 									<input type="text" class="form-control" id="titulo_img" name="titulo_img" autofocus required>
 								</div>
 							</div> 
 		
 							<div class="form-group">
-								<div class="col-xs-5">
+								<div class="col-xs-4">
 									<label for="dtfoto">Data em que a foto foi tirada</label>
 									<input type="date" class="form-control" id="dtfoto" name="dtfoto">
 								</div>
 							</div> 
 		
 							<div class="form-group">
-								<div class="col-xs-10">
+								<div class="col-xs-12">
 									<label>Descrição</label>
-									<textarea class="form-control" rows="5" ></textarea>
+									<textarea class="form-control" rows="3" ></textarea>
 								</div>
 							</div>
 		 
 							<div class="form-group">
 								<div class="col-xs-10">
-									<input type="file" name="imagem">
+									<input type="file" name="imagem" accept="image/png, image/jpeg">
 								</div>
 							</div>
-		  
+		  					
 							<div class="form-group">
-								<div class="col-xs-10">
-									<button class="btn pull-right">Adicionar</button>
+								<div class="col-xs-5">
+									<label>Latitude</label>
+									<input id="latitude" type="text" class="form-control">
+									<label>Longitude</label>
+									<input id="longitude" type="text" class="form-control">
 								</div>
 							</div>	
 						</form>
-			</div>
-			<div class="modal-body">
-						
+					</div>
+					<div class="modal-footer">
+						<button type="button" value="cancelar" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+						<button type="button" value="adicionar" class="btn">Ok</button>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>

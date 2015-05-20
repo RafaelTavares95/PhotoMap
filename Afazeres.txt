@@ -1,5 +1,5 @@
 -Fazer a junção dos detalhes de cada exemplo
--na tela de cadastro colocar uma barra em cima, com os links para o home e index
--dividir a tela de cadastro ao meio, com um espaço para o form e outro para o mapa+input de pesquisa
+-na tela de cadastro colocar uma barra em cima, com os links para o home e index --DONE
+-dividir a tela de cadastro ao meio, com um espaço para o form e outro para o mapa+input de pesquisa --DONE
 -Fazer tela de home com um grid que para exibir as imagens, ao clicar em uma imagem vai ser redirecionado para outra pagina de detalhes
 -fazer tela de detalhes com a imagen as informações dela e o mapa, tudo exibido na mesma estrutura da tela de cadastro.

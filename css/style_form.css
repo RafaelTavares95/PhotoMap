@@ -44,6 +44,10 @@ form{
 	color:white;
 }
 
+p{
+	text-align:justify;
+}
+
 #map_canvas{
 	height: 100% 
 }

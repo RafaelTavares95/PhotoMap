@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" charset="UTF-8" />
+	<style type="text/css">
+	html { height: 100% }
+	body { height: 100%; margin: 0; padding: 0 }
+	#map_canvas { height: 100% }
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+	function initialize() {
+		var mapOptions = {
+			zoom: 12,
+			center: new google.maps.LatLng(-25.363882,131.044922),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+		google.maps.event.addListener(map, 'click', function(event) {
+    		placeMarker(event.latLng);
+  		});
+
+  		function placeMarker(location) {
+		var marker = new google.maps.Marker({
+			position: location,
+			map: map,
+			title: "new Marker",
+			animation: google.maps.Animation.DROP
+		});
+
+		$('#latitude').val(location.lat())
+		$('#longitude').val(location.lng())
+		map.setCenter(location);
+	}
+	}
+
+
+
+	function loadScript() {
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyChZmr53ae-Rp57sXbnHgKw-H9L0FGyHbw&sensor=TRUE_OR_FALSE&callback=initialize";
+		document.body.appendChild(script);
+	}
+
+	
+	</script>
+</head>
+<body Onload="loadScript()">
+	<h1>Space Form</h1>
+	<form enctype="multipart/form-data" method="POST">
+		<input id="latitude" type="text">
+		<input id="longitude" type="text">
+		<div class="form-group">
+						<label for="nome">Título </label>
+						<input type="text" class="form-control" id="nome" name="nome" autofocus required>
+					</div><br>
+						
+					<div class="form-group">
+						<label for="dtfoto">Data em que a foto foi tirada</label>
+						<input type="date" class="form-control" id="dtfoto" name="dtfoto">
+					</div><br>
+						
+					<div class="form-group">
+						<label for="email">Descrição</label>
+						<textarea class="form-control" rows="5" ></textarea>
+					</div><br>
+					<input type="file" name="image" accept="image/png, image/jpeg" ><br>
+						
+					<button type="submit" class="btn btn-primary pull-right btn-lg">
+						Cadastrar
+					</button>
+	</form>	
+		<br>
+		<h1>Space Map</h1>
+		<input id="city" type="search">
+		<div id="map_canvas" style="width:60%; height:60%" ></div>
+</body>
+</html>

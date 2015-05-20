@@ -7,27 +7,31 @@ body{
 	margin: 0; 
 	padding: 0; 
 	background-image: url();
-	font-family:'Slabo 27px', serif;
-    font-size: 18px;
+	font-family:'Slabo 27px', serif !important;
+    
 	color:#020538;
 }
+
 .container{
 	margin: 0 auto;
 	padding-right:50px;
 	padding-left: 50px;
  
 }
+
 .navbar{
-	background-color: black!important;
+	background-color: #1B0035!important;
 	}
+	
 .logo{
 	height: 35px;
 	}
 	
 .icone{
-	color: orange;
+	color: white;
 	font-size:25px;
 	}
+
 
 form{
 	margin-top:60px;
@@ -35,6 +39,12 @@ form{
 	padding: 20px;
 	border:1px solid #DCDCDC;
 	background-color: white;
+	font-size:18px;
+}
+
+.btn{
+	background-color:#020538;
+	color:white;
 }
 
 #map_canvas{

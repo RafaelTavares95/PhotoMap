@@ -34,7 +34,7 @@ body{
 
 
 form{
-	margin-top:60px;
+	border-color:white !important;
 	margin-bottom:60px;
 	padding: 20px;
 	border:1px solid #DCDCDC;

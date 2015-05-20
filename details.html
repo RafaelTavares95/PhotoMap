@@ -45,7 +45,7 @@
 					<hr>
 					<div class="row">
 						<div class="col-md-6">
-							<a class="thumbnail" type="button" data-toggle="modal" data-target="#myModal" href="#myModal" title="Ver Foto">
+							<a class="thumbnail" type="button" data-toggle="modal" data-target="#modalZoom" href="#modalZoom" title="Ver Foto">
 								<img class="img-responsive" src="img/foto2.jpg" alt="">
 							</a>
 							
@@ -58,20 +58,34 @@
 				<div class="col-md-3">
 					<iframe width="540" height="500" frameborder="0" style="border:0" src="	https://www.google.com/maps/embed/v1/place?key=AIzaSyDWyh4ILgwj-ztTCNo0NAtOuTPx9J6vMf8&q=46.414382,10.013988">
 					</iframe>
+					<a class="streetView" type="button" data-toggle="modal" data-target="#modalStreet" href="#modalStreet">Ver no Street View</a>
 				</div>
+				
 			</div>
 		</div>
   
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="modalZoom" tabindex="-1" role="dialog" aria-labelledby="modalZoomLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">         
 					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button><br></br>
 						<img class="img-responsive" src="img/foto2.jpg" alt="">
 					</div>
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
-
+		
+		<div class="modal fade" id="modalStreet" tabindex="-1" role="dialog" aria-labelledby="modalStreetLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<iframe width="540" height="500" frameborder="0" style="border:0" src="	https://www.google.com/maps/embed/v1/streetview?key=AIzaSyDWyh4ILgwj-ztTCNo0NAtOuTPx9J6vMf8&location=-6.893707270014,-38.571624755859&heading=210&pitch=10&fov=35">
+						</iframe>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 		
 		
 		<!-- script references -->

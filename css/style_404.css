@@ -1,0 +1,23 @@
+body{
+	
+	font-family:'Slabo 27px', serif !important;
+    
+}
+
+.navbar{
+	background-color: #1B0035!important;
+	}
+	
+.logo{
+	height: 35px;
+	}
+	
+.icone{
+	color: white;
+	font-size:25px;
+	}
+
+h1,h2{
+	color:#1B0035 !important;
+	font-weight: bold !important;
+}

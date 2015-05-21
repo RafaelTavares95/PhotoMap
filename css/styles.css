@@ -64,3 +64,8 @@ p{
 #map_canvas{
 	height: 100% 
 }
+
+.err{
+	color:#1B0035 !important;
+	font-weight: bold !important;
+}
